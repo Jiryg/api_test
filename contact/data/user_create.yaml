@@ -1,0 +1,14 @@
+test_info:
+  request_type: POST
+  url: 'https://qyapi.weixin.qq.com/cgi-bin/user/create'
+  params:
+    - access_token: $access_token
+
+check:
+  check_type: Regular_check   #正则校验，多项匹配
+  expected_code: 200
+  expected_result:
+    - '"username": "wuya'
+    - '"Parking_time_long": "20h18min"'
+    - '"userID": 22'
+    - '"Parking fee": "20\$"'
